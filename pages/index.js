@@ -14,6 +14,7 @@ export default function Index({ playlists }) {
 			</div>
 			<div className="container mx-auto">
 				{playlists &&
+					playlist.items &&
 					playlists.items.map((element, index) => {
 						return (
 							<div className="container my-10">
