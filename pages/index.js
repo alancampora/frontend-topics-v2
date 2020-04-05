@@ -2,31 +2,32 @@ import fetch from 'node-fetch';
 import Button from './components/button';
 import Card from './components/card';
 
-export default function Index() {
+export default function Index({ playlists }) {
 	return (
-		<div className="p-4">
+		<div className="container mx-auto p-4">
 			<div className="header p-4">
 				<img
 					className="h-50 w-50 rounded-full mx-auto border-solid border-2"
 					src="/profile.jpeg"
 				/>
-				<h1 className="text-2xl text-center font-mono">Frontend Topics</h1>
+				<h1 className="text-3xl text-center font-mono">Frontend Topics</h1>
 			</div>
 			<div className="container mx-auto">
-				{[
-					{
-						link: 'something',
-						title: 'this is the title',
-						description: 'this is the description',
-						tag: 'React',
-					},
-				].map((element, index) => {
-					return (
-						<div key={index}>
-							<Card {...element} />
-						</div>
-					);
-				})}
+				{playlists &&
+					playlists.items.map((element, index) => {
+						return (
+							<div className="container my-10">
+								<div className="text-center text-black py-2 px-4 text-2xl">
+									{element.title}
+								</div>
+								<div className="py-2 border-grey-500 rounded-lg shadow-lg">
+									{element.videos.map(video => (
+										<Card {...video} />
+									))}
+								</div>
+							</div>
+						);
+					})}
 			</div>
 		</div>
 	);
@@ -38,18 +39,15 @@ export async function getStaticProps({ req }) {
 		process.env.APP_ENVIRONMENT === 'development'
 			? 'http://localhost:3001'
 			: 'https://frontend-topics-v2.now.sh';
-  
+
 	const res = await fetch(`${baseUrl}/api/all-videos-en`);
 
-	const posts = await res.json();
-  
-	console.log({ posts });
+	const playlists = await res.json();
 
-	// By returning { props: posts }, the Blog component
-	// will receive `posts` as a prop at build time
+	console.log({ playlists });
 	return {
 		props: {
-			posts,
+			playlists,
 		},
 	};
 }

@@ -9,8 +9,6 @@ export default async (req, res) => {
 		key: process.env.YOUTUBE_KEY,
 		channelId: process.env.YOUTUBE_CHANNEL_EN,
 	};
-  console.log(process.env);
-
 	const { key, channelId } = secrets;
 
 	const youtube = new YouTube(key);
@@ -22,14 +20,14 @@ export default async (req, res) => {
 		title: item.title,
 	}));
 
-	const playlistItems = await Promise.all(
+	const items = await Promise.all(
 		formattedPlaylists.map(async playlist => {
 			let videos = await youtube.getPlaylistItems(playlist.id);
 			videos = videos.map(
 				({ id, title, description, thumbnails, tags, date, url }) => ({
 					id,
 					title,
-					description,
+					description: description.substring(0, description.indexOf('\n')),
 					thumbnails,
 					tags,
 					date,
@@ -43,5 +41,5 @@ export default async (req, res) => {
 		}),
 	);
 
-	res.status(200).json({ playlistItems });
+	res.status(200).json({ items });
 };
