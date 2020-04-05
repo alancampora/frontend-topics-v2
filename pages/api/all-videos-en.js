@@ -41,5 +41,7 @@ export default async (req, res) => {
 		}),
 	);
 
+  console.log({items});
+
 	res.status(200).json({ items });
 };
