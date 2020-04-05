@@ -1,9 +1,18 @@
-export default function Card({ title, description, url, tag, thumbnails }) {
+export default function Card({
+	title,
+	description,
+	url,
+	tag,
+	thumbnails = {},
+}) {
 	return (
 		<a href={url}>
 			<div className="m-4 md:flex">
 				<div className="md:flex-shrink-0">
-					<img className="rounded-lg md:w-56" src={thumbnails.maxres.url} />
+					<img
+						className="rounded-lg md:w-56"
+						src={thumbnails.maxres ? thumbnails.maxres.url : ''}
+					/>
 				</div>
 				<div className="mt-4 md:mt-0 md:ml-6">
 					<div className="uppercase tracking-wide text-sm text-indigo-600 font-bold">
