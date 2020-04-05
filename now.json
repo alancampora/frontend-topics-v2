@@ -1,0 +1,6 @@
+{
+  "env": {
+    "YOUTUBE_CHANNEL_EN": "@youtube_channel_en",
+    "YOUTUBE_KEY": "@youtube_key"
+  }
+}
