@@ -1,6 +1,7 @@
 {
   "env": {
     "YOUTUBE_CHANNEL_EN": "@youtube_channel_en",
-    "YOUTUBE_KEY": "@youtube_key"
+    "YOUTUBE_KEY": "@youtube_key",
+    "APP_ENVIRONMENT": "production"
   }
 }

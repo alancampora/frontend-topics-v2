@@ -43,7 +43,5 @@ export default async (req, res) => {
 		}),
 	);
 
-	console.log(playlistItems);
-
 	res.status(200).json({ playlistItems });
 };
