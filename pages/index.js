@@ -1,17 +1,13 @@
 import fetch from 'node-fetch';
 import Button from './components/button';
 import Card from './components/card';
+import Footer from './components/footer';
+import Header from './components/header';
 
 export default function Index({ playlists }) {
 	return (
 		<div className="container mx-auto p-4">
-			<div className="header p-4">
-				<img
-					className="h-50 w-50 rounded-full mx-auto border-solid border-2"
-					src="/profile.jpeg"
-				/>
-				<h1 className="text-3xl text-center font-mono">Frontend Topics</h1>
-			</div>
+			<Header />
 			<div className="container mx-auto">
 				{playlists &&
 					playlists.items &&
@@ -21,7 +17,7 @@ export default function Index({ playlists }) {
 								<div className="text-center text-black py-2 px-4 text-2xl">
 									{element.title}
 								</div>
-								<div className="py-2 border-grey-500 rounded-lg shadow-lg">
+								<div className="py-2 border-grey-500 rounded-lg">
 									{element.videos.map(video => (
 										<Card {...video} />
 									))}
@@ -30,6 +26,7 @@ export default function Index({ playlists }) {
 						);
 					})}
 			</div>
+			<Footer />
 		</div>
 	);
 }
