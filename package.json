@@ -11,6 +11,7 @@
 	"dependencies": {
 		"country-emoji": "^1.5.0",
 		"next": "^9.3.4",
+		"next-ga": "^2.3.4",
 		"node-fetch": "^2.6.0",
 		"popyt": "^3.0.0",
 		"react": "^16.13.1",

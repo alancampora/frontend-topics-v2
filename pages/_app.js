@@ -1,5 +1,11 @@
-import '../styles/index.css'
+import '../styles/index.css';
+import Router from 'next/router';
+import withGA from 'next-ga';
 
-export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+	return <Component {...pageProps} />;
 }
+
+console.log('dale', process.env.GOOGLE_ANALYTICS);
+
+export default withGA(process.env.GOOGLE_ANALYTICS, Router)(MyApp);
