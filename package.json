@@ -15,6 +15,7 @@
 		"popyt": "^3.0.0",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
+		"react-ga": "^2.7.0",
 		"youtube-api": "^2.0.10"
 	},
 	"devDependencies": {
