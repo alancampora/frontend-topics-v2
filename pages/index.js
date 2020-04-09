@@ -23,7 +23,7 @@ export default function Index({ playlists }) {
 											className="
                       h-p 
                       border-t-2 
-                      border-indigo-100
+                      border-purple-200
                       w-full
                     "
 										></div>
@@ -31,12 +31,12 @@ export default function Index({ playlists }) {
 											className="
                       flex-shrink-0
                       text-center 
-                      text-black 
+                      text-purple-900
                       py-2 
                       px-4 
                       text-xl
                       rounded-md
-                      bg-indigo-100
+                      bg-purple-200
                     "
 										>
 											{element.title}
@@ -45,7 +45,7 @@ export default function Index({ playlists }) {
 											className="
                       h-p 
                       border-t-2 
-                      border-indigo-100
+                      border-purple-200
                       w-full
                     "
 										></div>
@@ -65,8 +65,8 @@ export default function Index({ playlists }) {
 							);
 						})}
 				</div>
-				<Footer />
 			</div>
+			<Footer />
 		</div>
 	);
 }
