@@ -1,27 +1,11 @@
 import { useEffect } from 'react';
 import fetch from 'node-fetch';
-import Button from './components/button';
 import Card from './components/card';
-import Footer from './components/footer';
-import Header from './components/header';
-import Hero from './components/hero';
-import Navbar from './components/navbar';
-import ReactGA from 'react-ga';
-
-function useGoogleAnalytics() {
-	useEffect(() => {
-		ReactGA.initialize(process.env.GOOGLE_ANALYTICS);
-		ReactGA.pageview(window.location.pathname + window.location.search);
-	}, []);
-}
+import Layout from './components/layout';
 
 export default function Index({ playlists }) {
-	useGoogleAnalytics();
-
 	return (
-		<div>
-			<Header />
-			<Hero />
+		<Layout>
 			<div className="container mx-auto p-4">
 				<div className="container mx-auto">
 					{playlists &&
@@ -77,8 +61,7 @@ export default function Index({ playlists }) {
 						})}
 				</div>
 			</div>
-			<Footer />
-		</div>
+		</Layout>
 	);
 }
 
