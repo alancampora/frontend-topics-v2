@@ -9,7 +9,7 @@ export default function Hero() {
 					</div>
 				</div>
 				<div className="flex-1 p-4">
-					<img className="w-48" src="/hero.png" />
+					<img className="w-64" src="/hero.png" />
 				</div>
 			</div>
 		</div>
