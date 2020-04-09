@@ -3,12 +3,14 @@ import Button from './components/button';
 import Card from './components/card';
 import Footer from './components/footer';
 import Header from './components/header';
+import Hero from './components/hero';
 import Navbar from './components/navbar';
 
 export default function Index({ playlists }) {
 	return (
 		<div>
 			<Header />
+			<Hero />
 			<div className="container mx-auto p-4">
 				<div className="container mx-auto">
 					{playlists &&

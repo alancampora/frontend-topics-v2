@@ -1,6 +1,6 @@
 export default function Header() {
 	return (
-		<nav className="flex items-center flex-wrap bg-gray-800 py-2 px-4 justify-between">
+		<nav className="flex items-center flex-wrap bg-gray-900 py-2 px-4 justify-between">
 			<div className="flex items-center flex-shrink-0 text-white mr-6">
 				<a className="text-white no-underline hover:text-white hover:no-underline">
 					<span className="text-xl font-mono">{`<Frontend Topics />`}</span>
