@@ -1,6 +1,6 @@
 export default function Header() {
 	return (
-		<nav className="flex items-center flex-wrap bg-gray-900 py-2 px-4 justify-between">
+		<nav className="flex items-center flex-wrap bg-purple-900 py-2 px-4 justify-between">
 			<div className="flex items-center flex-shrink-0 text-white mr-6">
 				<a className="text-white no-underline hover:text-white hover:no-underline">
 					<span className="text-xl font-mono">{`<Frontend Topics />`}</span>
@@ -16,7 +16,7 @@ export default function Header() {
 						class="fill-current h-3 w-3"
 						viewBox="0 0 20 20"
 						xmlns="http://www.w3.org/2000/svg"
-					>
+		 			>
 						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
 					</svg>
 				</button>
