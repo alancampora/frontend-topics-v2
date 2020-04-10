@@ -10,9 +10,9 @@ export async function getStaticProps({ req }) {
 	const baseUrl =
 		process.env.APP_ENVIRONMENT === 'development'
 			? 'http://localhost:3001'
-			: 'https://frontend-topics-v2.now.sh';
+			: process.env.APP_PROD_URL;
 
-  const res = await fetch(`${baseUrl}/api/en/all-videos`);
+	const res = await fetch(`${baseUrl}/api/en/all-videos`);
 
 	const playlists = await res.json();
 
