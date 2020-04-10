@@ -3,7 +3,7 @@ export default function Card({
 	description,
 	url,
 	tag,
-	thumbnails = {},
+	imgSrc,
 }) {
 	return (
 		<a href={url}>
@@ -11,7 +11,7 @@ export default function Card({
 				<div className="md:flex-shrink-0">
 					<img
 						className="rounded-lg md:w-56"
-						src={thumbnails.maxres ? thumbnails.maxres.url : ''}
+						src={imgSrc}
 					/>
 				</div>
 				<div className="mt-4 md:mt-0 md:ml-6">

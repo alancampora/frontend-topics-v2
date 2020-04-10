@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import Home from './views/home/';
+import Home from '../views/home/';
 
 export default function Index({ playlists }) {
 	return <Home playlists={playlists} />;
@@ -12,7 +12,7 @@ export async function getStaticProps({ req }) {
 			? 'http://localhost:3001'
 			: 'https://frontend-topics-v2.now.sh';
 
-  const res = await fetch(`${baseUrl}/api/en/all-videos`);
+	const res = await fetch(`${baseUrl}/api/es/all-videos`);
 
 	const playlists = await res.json();
 

@@ -1,4 +1,4 @@
-import Layout from './components/layout/';
+import Layout from '../components/layout/';
 
 export default function About() {
 	return (
@@ -12,15 +12,7 @@ export default function About() {
 						/>
 					</div>
 					<div className="m-4 text-xl">
-						<p>
-							Hello world! I'm Alan Campora, a software engineer who enjoys
-							learning new stuff and creating videos/blogs to share my knowledge
-							to everyone.
-						</p>
-						<p>
-							From my point of view, programming gives us SUPERPOWERS which
-							everyone should have access to.
-						</p>
+						<p>this is a tests</p>
 					</div>
 				</div>
 			</div>
