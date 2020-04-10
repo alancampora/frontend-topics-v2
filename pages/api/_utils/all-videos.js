@@ -1,16 +1,6 @@
 import { YouTube } from 'popyt';
 
-export default async (req, res) => {
-	const {
-		query: { id },
-	} = req;
-
-	const secrets = {
-		key: process.env.YOUTUBE_KEY,
-		channelId: process.env.YOUTUBE_CHANNEL_EN,
-	};
-	const { key, channelId } = secrets;
-
+export default (key, channelId) => async (req, res) => {
 	const youtube = new YouTube(key);
 
 	const playlists = await youtube.getChannelPlaylists(channelId);
@@ -41,7 +31,7 @@ export default async (req, res) => {
 		}),
 	);
 
-  console.log({items});
+	console.log({ items });
 
 	res.status(200).json({ items });
 };

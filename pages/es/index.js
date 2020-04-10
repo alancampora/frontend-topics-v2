@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import Home from './views/home/';
+import Home from '../views/home/';
 
 export default function Index({ playlists }) {
 	return <Home playlists={playlists} />;
@@ -7,15 +7,17 @@ export default function Index({ playlists }) {
 
 export async function getStaticProps({ req }) {
 	// Call an external API endpoint to get posts.
+  console.log({req});
 	const baseUrl =
 		process.env.APP_ENVIRONMENT === 'development'
 			? 'http://localhost:3001'
-			: process.env.APP_PROD_URL;
+			: 'https://frontend-topics-v2.now.sh';
 
-	const res = await fetch(`${baseUrl}/api/en/all-videos`);
+	const res = await fetch(`${baseUrl}/api/es/all-videos`);
 
 	const playlists = await res.json();
 
+	console.log({ playlists });
 	return {
 		props: {
 			playlists,

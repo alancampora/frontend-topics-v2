@@ -1,8 +1,10 @@
 {
-  "env": {
-    "YOUTUBE_CHANNEL_EN": "@youtube_channel_en",
-    "YOUTUBE_KEY": "@youtube_key",
-    "GOOGLE_ANALYTICS": "@google_analytics",
-    "APP_ENVIRONMENT": "production"
-  }
+	"env": {
+		"YOUTUBE_CHANNEL_EN": "@youtube_channel_en",
+		"YOUTUBE_CHANNEL_ES": "@youtube_channel_es",
+		"YOUTUBE_KEY": "@youtube_key",
+		"GOOGLE_ANALYTICS": "@google_analytics",
+		"APP_ENVIRONMENT": "production",
+		"APP_PROD_URL": "@app_prod_url"
+	}
 }
