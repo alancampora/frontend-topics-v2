@@ -5,7 +5,9 @@ export default function Index({ playlists }) {
 	return <Home playlists={playlists} />;
 }
 
-export async function getStaticProps({ req }) {
+export async function getStaticProps(context) {
+  console.log({context});
+  console.log(process.env);
 	// Call an external API endpoint to get posts.
 	const baseUrl =
 		process.env.APP_ENVIRONMENT === 'development'
