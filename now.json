@@ -5,6 +5,7 @@
 		"YOUTUBE_KEY": "@youtube_key",
 		"GOOGLE_ANALYTICS": "@google_analytics",
 		"APP_ENVIRONMENT": "production",
-		"APP_PROD_URL": "@app_prod_url"
+		"PROD_URL": "@prod_url"
 	}
 }
+
