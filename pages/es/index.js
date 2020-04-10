@@ -7,6 +7,7 @@ export default function Index({ playlists }) {
 
 export async function getStaticProps({ req }) {
 	// Call an external API endpoint to get posts.
+  console.log({req});
 	const baseUrl =
 		process.env.APP_ENVIRONMENT === 'development'
 			? 'http://localhost:3001'
