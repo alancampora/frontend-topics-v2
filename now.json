@@ -8,11 +8,13 @@
 		"PROD_URL": "@prod_url"
 	},
 	"build": {
-		"YOUTUBE_CHANNEL_EN": "@youtube_channel_en",
-		"YOUTUBE_CHANNEL_ES": "@youtube_channel_es",
-		"YOUTUBE_KEY": "@youtube_key",
-		"GOOGLE_ANALYTICS": "@google_analytics",
-		"APP_ENVIRONMENT": "production",
-		"PROD_URL": "@prod_url"
+		"env": {
+			"YOUTUBE_CHANNEL_EN": "@youtube_channel_en",
+			"YOUTUBE_CHANNEL_ES": "@youtube_channel_es",
+			"YOUTUBE_KEY": "@youtube_key",
+			"GOOGLE_ANALYTICS": "@google_analytics",
+			"APP_ENVIRONMENT": "production",
+			"PROD_URL": "@prod_url"
+		}
 	}
 }
