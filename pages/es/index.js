@@ -6,14 +6,12 @@ export default function Index({ playlists }) {
 }
 
 export async function getStaticProps({ req }) {
-	// Call an external API endpoint to get posts.
-  console.log({req});
 	const baseUrl =
 		process.env.APP_ENVIRONMENT === 'development'
 			? 'http://localhost:3001'
-			: 'https://frontend-topics-v2.now.sh';
+			: process.env.PROD_URL;
 
-	const res = await fetch(`${baseUrl}/api/es/all-videos`);
+	const res = await fetch(`${baseUrl}/api/all-videos/es`);
 
 	const playlists = await res.json();
 

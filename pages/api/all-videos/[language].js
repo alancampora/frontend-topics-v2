@@ -1,6 +1,24 @@
 import { YouTube } from 'popyt';
 
-export default (key, channelId) => async (req, res) => {
+const getChannelData = key => {
+	const mapper = {
+		en: process.env.YOUTUBE_CHANNEL_EN,
+		es: process.env.YOUTUBE_CHANNEL_ES,
+	};
+
+	return {
+		key: process.env.YOUTUBE_KEY,
+		channelId: mapper[key],
+	};
+};
+
+export default async (req, res) => {
+	const {
+		query: { language },
+	} = req;
+
+	const { key, channelId } = getChannelData(language);
+
 	const youtube = new YouTube(key);
 
 	const playlists = await youtube.getChannelPlaylists(channelId);
@@ -30,8 +48,6 @@ export default (key, channelId) => async (req, res) => {
 			};
 		}),
 	);
-
-	console.log({ items });
 
 	res.status(200).json({ items });
 };
