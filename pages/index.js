@@ -6,5 +6,6 @@ export default function Index({ playlists }) {
 }
 
 export async function getStaticProps() {
-  return getData('api/en/all-videos');
+  const data = await getData('api/es/all-videos'); 
+  return data;
 }
