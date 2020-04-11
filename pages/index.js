@@ -11,7 +11,7 @@ export async function getStaticProps({ req }) {
 			? 'http://localhost:3001'
 			: process.env.PROD_URL;
 
-	const res = await fetch(`${baseUrl}/api/all-videos/en`);
+  const res = await fetch(`${baseUrl}/api/en/all-videos/`);
 
 	const playlists = await res.json();
 
