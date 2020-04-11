@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import fetch from 'node-fetch';
 import Card from '../../components/card';
 import Layout from '../../components/layout';
 
