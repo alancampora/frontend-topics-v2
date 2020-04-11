@@ -1,5 +1,5 @@
 import Home from './views/home';
-import getData from './views/home/data'
+import getData from './views/home/_data'
 
 export default function Index({ playlists }) {
 	return <Home playlists={playlists} />;
