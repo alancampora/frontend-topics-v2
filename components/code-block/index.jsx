@@ -7,7 +7,7 @@ export default ({ children, className }) => {
 		<Highlight {...defaultProps} code={children} language={language}>
 			{({ className, style, tokens, getLineProps, getTokenProps }) => (
 				<pre
-					className={`text-l rounded-lg m-4 ${className}`}
+					className={`text-l rounded-lg overflow-auto ${className}`}
 					style={{ ...style, padding: '20px' }}
 				>
 					{tokens.map((line, i) => (
