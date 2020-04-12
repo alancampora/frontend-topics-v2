@@ -4,7 +4,7 @@ import Layout from '../../components/layout';
 
 export default function Blog(props) {
 	return (
-		<Layout>
+		<Layout heroImage="/blog.png">
 			<div className="flex flex-wrap justify-center">
 				{props.posts.map((post, index) => (
 					<div className="m-4" key={index}>

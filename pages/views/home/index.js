@@ -3,7 +3,7 @@ import Layout from '../../../components/layout';
 
 export default function Home({ playlists }) {
 	return (
-		<Layout>
+		<Layout heroImage="/hero.png">
 			<div className="container mx-auto p-4">
 				<div className="container mx-auto">
 					{playlists &&
