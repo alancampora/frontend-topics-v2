@@ -19,6 +19,7 @@
 		"next-ga": "^2.3.4",
 		"node-fetch": "^2.6.0",
 		"popyt": "^3.0.0",
+		"prism-react-renderer": "^1.0.2",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"react-ga": "^2.7.0",
