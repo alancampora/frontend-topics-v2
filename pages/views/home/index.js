@@ -1,5 +1,5 @@
-import Card from '../../components/card';
-import Layout from '../../components/layout';
+import Card from '../../../components/card';
+import Layout from '../../../components/layout';
 
 export default function Home({ playlists }) {
 	return (

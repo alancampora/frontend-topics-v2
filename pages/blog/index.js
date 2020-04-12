@@ -1,6 +1,6 @@
 import glob from 'glob';
 import Link from 'next/link';
-import Layout from '../components/layout';
+import Layout from '../../components/layout';
 
 export default function Blog(props) {
   return (
