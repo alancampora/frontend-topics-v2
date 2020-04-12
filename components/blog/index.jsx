@@ -2,9 +2,9 @@ import { MDXProvider } from '@mdx-js/react';
 import GlobalLayout from './layout';
 import CodeBlock from '../code-block';
 
-export default function Layout({ children }) {
+export default function Layout({ children, ...rest }) {
 	return (
-		<GlobalLayout>
+		<GlobalLayout {...rest}>
 			<MDXProvider
 				components={{
 					h1: props => (

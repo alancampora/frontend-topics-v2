@@ -1,13 +1,16 @@
-export const frontmatter = {
-  title: 'Goodbye clean code',
-  author: 'Dan',
-  date: '2019-07-10',
-  heroImage: '../static/bali-15.jpg'
-};
-
 import Layout from '../../../components/blog';
 
-export default ({ children }) => <Layout>{children}</Layout>;
+export const frontmatter = {
+title: 'Goodbye clean code',
+author: 'Dan',
+date: '2019-07-10',
+hero: {
+image: '/blog/hero/clean-code.jpg',
+author: 'Photo by Alexandre Debiève on Unsplash',
+},
+};
+
+export default (props) => console.log('layout', props) || <Layout {...props}/>;
 
 # Adios codigo limpio
 
@@ -23,57 +26,57 @@ El código era algo así:
 
 ```jsx
 let Rectangle = {
-  resizeTopLeft(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  },
-  resizeTopRight(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  },
-  resizeBottomLeft(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  },
-  resizeBottomRight(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  }
+	resizeTopLeft(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
+	resizeTopRight(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
+	resizeBottomLeft(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
+	resizeBottomRight(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
 };
 
 let Oval = {
-  resizeLeft(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  },
-  resizeRight(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  },
-  resizeTop(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  },
-  resizeBottom(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  }
+	resizeLeft(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
+	resizeRight(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
+	resizeTop(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
+	resizeBottom(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
 };
 
 let Header = {
-  resizeLeft(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  },
-  resizeRight(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  }
+	resizeLeft(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
+	resizeRight(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
 };
 
 let TextBlock = {
-  resizeTopLeft(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  },
-  resizeTopRight(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  },
-  resizeBottomLeft(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  },
-  resizeBottomRight(position, size, preserveAspect, dx, dy) {
-    // 10 líneas repetitivas de operaciones matemáticas
-  }
+	resizeTopLeft(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
+	resizeTopRight(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
+	resizeBottomLeft(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
+	resizeBottomRight(position, size, preserveAspect, dx, dy) {
+		// 10 líneas repetitivas de operaciones matemáticas
+	},
 };
 ```
 
@@ -121,25 +124,25 @@ y luego componiendo sus comportamientos:
 let { top, bottom, left, right } = Directions;
 
 function createHandle(directions) {
-  // 20 líneas de código
+	// 20 líneas de código
 }
 
 let fourCorners = [
-  createHandle([top, left]),
-  createHandle([top, right]),
-  createHandle([bottom, left]),
-  createHandle([bottom, right])
+	createHandle([top, left]),
+	createHandle([top, right]),
+	createHandle([bottom, left]),
+	createHandle([bottom, right]),
 ];
 let fourSides = [
-  createHandle([top]),
-  createHandle([left]),
-  createHandle([right]),
-  createHandle([bottom])
+	createHandle([top]),
+	createHandle([left]),
+	createHandle([right]),
+	createHandle([bottom]),
 ];
 let twoSides = [createHandle([left]), createHandle([right])];
 
 function createBox(shape, handles) {
-  // 20 líneas de código
+	// 20 líneas de código
 }
 
 let Rectangle = createBox(Shapes.Rectangle, fourCorners);
