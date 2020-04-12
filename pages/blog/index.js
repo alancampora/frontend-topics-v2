@@ -7,7 +7,7 @@ export default function Blog(props) {
 		<Layout heroImage="/blog.png">
 			<div className="flex flex-wrap justify-center">
 				{props.posts.map((post, index) => (
-					<div className="m-4" key={index}>
+					<div className="m-4 cursor-pointer" key={index}>
 						<Link href={post.url}>
 							<div className="max-w-sm rounded shadow-lg">
 								<img
