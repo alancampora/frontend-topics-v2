@@ -1,6 +1,7 @@
 import Footer from '../footer';
 import Header from '../header';
 import Hero from '../hero';
+import Author from '../author';
 
 export default function Layout({ frontmatter, children }) {
 	return (
@@ -15,6 +16,10 @@ export default function Layout({ frontmatter, children }) {
 						</div>
 					)}
 				</div>
+				<Author
+					photo={frontmatter.author.photo}
+					name={frontmatter.author.name}
+				/>
 				<div>{children}</div>
 			</div>
 			<Footer />

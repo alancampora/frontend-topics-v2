@@ -3,7 +3,10 @@ import Layout from '../../../components/blog';
 export const frontmatter = {
 title: 'Goodbye clean code',
 description: 'Mi colega acababa de subir el código en el que había estado trabajando toda la semana. Estabamos trabajando en un editor de gráficos en canvas y ellos implementaron la capacidad de redimensionar figuras, como rectángulos y óvalos, usando pequeños controles en sus bordes y arrastrándolos.',
-author: 'Dan',
+author: {
+  name: 'Dan Abramov',
+  photo: 'https://2018.jsconf.is/334be4f4b98a948a0ce4dcdad0774aa5.jpg',
+},
 date: '2019-07-10',
 hero: {
 image: '/blog/hero/clean-code.jpg',
