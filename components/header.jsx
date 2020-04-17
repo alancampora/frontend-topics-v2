@@ -12,13 +12,13 @@ const routes = [
 		id: 'home',
 		label: 'Home',
 		href: '/',
-		isActive: true,
+		isActive: route => route === '/',
 	},
 	{
 		id: 'blog',
 		label: 'Blog',
 		href: '/blog',
-		isActive: false,
+		isActive: route => route.includes('/blog'),
 	},
 ];
 
@@ -60,7 +60,7 @@ export default function Header() {
 							<Link href={r.href}>
 								<a
 									className={
-										router.pathname === r.href ? activeLink : nonActiveLink
+										r.isActive(router.pathname) ? activeLink : nonActiveLink
 									}
 									href="#"
 								>

@@ -1,4 +1,4 @@
-export default function Hero() {
+export default function Hero({ imgSrc }) {
 	return (
 		<div className="h-200 bg-purple-500 text-yellow-200">
 			<div className="flex mx-auto p-5 items-center max-w-5xl">
@@ -9,7 +9,7 @@ export default function Hero() {
 					</div>
 				</div>
 				<div className="flex-1 p-4">
-					<img className="w-64" src="/hero.png" />
+					<img className="w-64" src={imgSrc} />
 				</div>
 			</div>
 		</div>
