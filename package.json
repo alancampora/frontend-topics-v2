@@ -15,7 +15,7 @@
 		"country-emoji": "^1.5.0",
 		"glob": "^7.1.6",
 		"gray-matter": "^4.0.2",
-		"next": "^9.3.4",
+		"next": "^11.1.3",
 		"next-ga": "^2.3.4",
 		"node-fetch": "^2.6.0",
 		"popyt": "^3.0.0",
